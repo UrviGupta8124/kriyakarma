@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>तेरह दिन की क्रिया — दादाजी, अक्टूबर 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Mukta:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#FBFBF8;--ink:#22262F;--muted:#666A73;--rule:#E2E1DA;--marigold:#B9770E;--marigold-soft:#F6EAD3;--ganga:#2F6177;--ganga-soft:#E3EDF1;--leaf:#55663A;--leaf-soft:#ECEFE2;--til:#4A4038}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:400 15.5px/1.55 "Mukta",system-ui,sans-serif}
+  h1,h2{font-family:"Tiro Devanagari Hindi",Georgia,serif;font-weight:400;line-height:1.2;margin:0}
+  :focus-visible{outline:2px solid var(--marigold);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+  body.l-hi .en{display:none!important}
+  body.l-en .hi{display:none!important}
+
+  .bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--rule)}
+  .bar .grp{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .seg{display:inline-flex;border:1px solid var(--til);border-radius:999px;overflow:hidden}
+  .seg button{background:none;border:0;padding:5px 12px;font:inherit;font-size:13.5px;cursor:pointer;color:var(--ink)}
+  .seg button[aria-pressed="true"]{background:var(--til);color:var(--paper)}
+  input[type=text]{font:inherit;font-size:14px;padding:5px 10px;border:1px solid var(--rule);border-radius:8px;width:190px;background:#fff}
+  .printbtn{font:inherit;font-size:13.5px;padding:5px 14px;border-radius:999px;border:1px solid var(--marigold);background:var(--marigold);color:#fff;cursor:pointer}
+  .small{font-size:13px;color:var(--muted)}
+
+  header{padding:22px 0 10px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--til)}
+  header h1{font-size:34px}
+  header h1 .om{color:var(--marigold);margin-right:8px}
+  .facts{font-size:14px;color:var(--muted);text-align:right}
+  .facts b{color:var(--ink);font-weight:500}
+
+  .now{background:var(--marigold-soft);border-left:3px solid var(--marigold);padding:8px 14px;margin:14px 0 4px;border-radius:0 6px 6px 0;font-size:14.5px}
+
+  h2{font-size:22px;margin:22px 0 8px}
+  .day{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--rule);break-inside:avoid}
+  .when .dn{font-family:"Tiro Devanagari Hindi",serif;font-size:28px;line-height:1;color:var(--til)}
+  .when .dt{font-size:13.5px;font-weight:500}
+  .day.today .when .dn{color:var(--marigold)}
+  .day.today{background:linear-gradient(90deg,var(--marigold-soft),transparent 60%)}
+  .day.past .body{opacity:.65}
+  .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+  .head .t{font-family:"Tiro Devanagari Hindi",serif;font-size:19px}
+  .head .tm{font-size:13px;color:var(--muted)}
+  .flag{font-size:11.5px;padding:0 8px;border-radius:999px;background:var(--ganga-soft);color:var(--ganga)}
+  .flag.warn{background:var(--marigold-soft);color:#8A5507}
+  .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:5px;font-size:13.5px;line-height:1.45}
+  .cols div{border-top:2px solid;padding-top:3px}
+  .cols b.r{display:block;font-size:12px;font-weight:700;margin-bottom:1px}
+  .c-p{border-color:var(--marigold)!important}.c-k{border-color:var(--ganga)!important}.c-f{border-color:var(--leaf)!important}.c-d{border-color:var(--til)!important}
+  .c-d .amt{color:var(--marigold);font-weight:700}
+  .quiet{padding:7px 0 7px 100px;border-bottom:1px solid var(--rule);font-size:13.5px;color:var(--muted)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  ul.tight{margin:0;padding-left:18px;font-size:14px}
+  ul.tight li{margin-bottom:3px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  td,th{padding:4px 6px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:500}
+  .num{text-align:right;white-space:nowrap}
+  tr.total td{font-weight:700;border-top:2px solid var(--til)}
+  footer{margin:20px 0 40px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:10px}
+
+  @media (max-width:720px){
+    .cols{grid-template-columns:1fr 1fr}
+    .grid2{grid-template-columns:1fr}
+    .day{grid-template-columns:1fr;gap:4px}
+    .when{display:flex;gap:10px;align-items:baseline}
+    .quiet{padding-left:0}
+    .facts{text-align:left}
+  }
+  @media (max-width:420px){.cols{grid-template-columns:1fr}}
+
+  @page{size:A4;margin:11mm 10mm}
+  @media print{
+    .bar,.now{display:none!important}
+    body{background:#fff;font-size:9.6pt;line-height:1.4}
+    .wrap{max-width:none;padding:0}
+    header{padding-top:0}
+    header h1{font-size:20pt}
+    h2{font-size:13pt;margin:10px 0 4px}
+    .day{padding:5px 0;grid-template-columns:62px 1fr;gap:8px}
+    .day.today{background:none}
+    .day.past .body{opacity:1}
+    .when .dn{font-size:17pt}
+    .when .dt{font-size:8.5pt}
+    .head .t{font-size:12pt}
+    .cols{font-size:8.6pt;gap:7px;grid-template-columns:repeat(4,1fr)}
+    .cols b.r{font-size:8pt}
+    .quiet{padding:3px 0 3px 70px;font-size:8.6pt}
+    table,ul.tight{font-size:8.8pt}
+    td,th{padding:2px 4px}
+    .grid2{grid-template-columns:1fr 1fr;gap:14px}
+    .keep{break-inside:avoid}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body class="l-hi">
+<div class="wrap bar">
+  <div class="grp">
+    <div class="seg" role="group" aria-label="भाषा / Language"><button id="lHi" aria-pressed="true">हिन्दी</button><button id="lEn" aria-pressed="false">English</button></div>
+    <div class="seg" role="group" aria-label="गिनती / Counting">
+      <button id="cDeath" aria-pressed="true"><span class="hi">देहावसान से गिनें</span><span class="en">Count from dehant</span></button>
+      <button id="cDaag" aria-pressed="false"><span class="hi">दाग से गिनें</span><span class="en">Count from Daag</span></button>
+    </div>
+    <input type="text" id="karta" aria-label="कर्ता का नाम / Karta's name">
+  </div>
+  <button class="printbtn" onclick="window.print()"><span class="hi">प्रिंट करें</span><span class="en">Print</span></button>
+</div>
+
+<div class="wrap">
+  <header>
+    <h1><span class="om">ॐ</span><span class="hi">दादाजी — तेरह दिन की क्रिया</span><span class="en">Dadaji — 13-day kriya karma</span></h1>
+    <div class="facts">
+      <span class="hi">वैश्य (बनिया), पश्चिमी उ.प्र. · गोत्र <b>मंगल</b><br>देहावसान <b>मंगल 6 अक्टूबर 2026, रात 8:10</b> (आश्विन कृष्ण एकादशी) · दाग <b>बुध 7 अक्टूबर</b></span>
+      <span class="en">Vaishya (Baniya), West UP · Gotra <b>Mangal</b><br>Dehant <b>Tue 6 Oct 2026, 8:10 pm</b> (Ashwin Krishna Ekadashi) · Daag <b>Wed 7 Oct</b></span>
+      <br><span id="countNote"></span>
+    </div>
+  </header>
+
+  <div class="now" id="now"></div>
+
+  <h2><span class="hi">दिन-प्रतिदिन कार्यक्रम</span><span class="en">Day-by-day plan</span></h2>
+  <div id="days"></div>
+
+  <div class="grid2">
+    <div class="keep">
+      <h2><span class="hi">रोज़ के नियम (दिन 1–13)</span><span class="en">Daily niyam (Days 1–13)</span></h2>
+      <ul class="tight hi">
+        <li><b>कर्ता:</b> ज़मीन पर सोना, दिन में एक बार सात्विक भोजन, दसवें दिन तक बाल-दाढ़ी नहीं, सफ़ेद कपड़े, मंदिर या किसी के घर नहीं।</li>
+        <li><b>कर्ता:</b> हर शाम पीपल पर दीया और घड़े में जल।</li>
+        <li><b>परिवार:</b> सूतक — घर का मंदिर ढका, पूजा-ज्योत नहीं; दक्षिण मुखी अखंड दीया; रोज़ गरुड़ पुराण पाठ।</li>
+        <li><b>परिवार:</b> कोई उत्सव, नई खरीदारी या शुभ कार्य नहीं। पहले साल त्योहार सादगी से।</li>
+      </ul>
+      <ul class="tight en">
+        <li><b>Karta:</b> sleeps on the floor, one sattvik meal a day, no shave or haircut until Day 10, white clothes, no temple or visiting homes.</li>
+        <li><b>Karta:</b> every evening, diya at the peepal and water in the ghada.</li>
+        <li><b>Family:</b> sutak — home mandir covered, no puja or jyot; south-facing akhand diya; daily Garud Puran path.</li>
+        <li><b>Family:</b> no celebration, new purchases or auspicious work. Festivals stay quiet for the first year.</li>
+      </ul>
+
+      <h2><span class="hi">इन दिनों के त्योहार</span><span class="en">Overlapping dates</span></h2>
+      <ul class="tight hi">
+        <li><b>10 अक्टू</b> सर्व पितृ अमावस्या — विसर्जन के लिए पुण्य का दिन, घाटों पर भारी भीड़।</li>
+        <li><b>11 अक्टू</b> नवरात्रि प्रारंभ — सूतक में घटस्थापना, ज्योत, कन्या पूजन नहीं।</li>
+        <li><b>18 / 19 अक्टू</b> अष्टमी / नवमी — तेरहवीं इन्हीं में से एक दिन; पंडित और हलवाई अभी बुक करें।</li>
+        <li><b>पंचक</b> 21–25 अक्टूबर — तेरह दिनों पर नहीं; पंचक शांति की ज़रूरत नहीं।</li>
+      </ul>
+      <ul class="tight en">
+        <li><b>10 Oct</b> Sarva Pitru Amavasya — meritorious for visarjan; heavy crowds at the ghats.</li>
+        <li><b>11 Oct</b> Navratri begins — no Ghatasthapana, jyot or kanya pujan in sutak.</li>
+        <li><b>18 / 19 Oct</b> Ashtami / Navami — Terahvi falls on one of these; book pandit and halwai now.</li>
+        <li><b>Panchak</b> 21–25 Oct — clear of all 13 days; no Panchak shanti needed.</li>
+      </ul>
+    </div>
+
+    <div class="keep">
+      <h2><span class="hi">दक्षिणा का अनुमान</span><span class="en">Dakshina estimate</span></h2>
+      <table>
+        <tbody>
+          <tr><td><span class="hi">अस्थि संचय</span><span class="en">Asthi Sanchay</span></td><td class="num">₹350 – 750</td></tr>
+          <tr><td><span class="hi">उठावनी</span><span class="en">Uthavani</span></td><td class="num">₹1,100 – 2,100</td></tr>
+          <tr><td><span class="hi">गरुड़ पुराण पाठ (10–13 दिन)</span><span class="en">Garud Puran path (10–13 days)</span></td><td class="num">₹5,100 – 11,000</td></tr>
+          <tr><td><span class="hi">अस्थि विसर्जन</span><span class="en">Asthi Visarjan</span></td><td class="num">₹2,600 – 6,200</td></tr>
+          <tr><td><span class="hi">दशगात्र (नाई सहित)</span><span class="en">Dashgatra (incl. naai)</span></td><td class="num">₹1,600 – 4,100</td></tr>
+          <tr><td><span class="hi">एकादशाह दक्षिणा + गौदान</span><span class="en">Ekadashah dakshina + gau daan</span></td><td class="num">₹3,200 – 10,200</td></tr>
+          <tr><td><span class="hi">शय्या दान का सामान</span><span class="en">Shayya daan items</span></td><td class="num">₹15,000 – 40,000</td></tr>
+          <tr><td><span class="hi">सपिंडीकरण</span><span class="en">Sapindikaran</span></td><td class="num">₹3,100 – 7,100</td></tr>
+          <tr><td><span class="hi">तेरहवीं (हवन + 13 ब्राह्मण)</span><span class="en">Terahvi (havan + 13 Brahmins)</span></td><td class="num">₹12,000 – 30,000</td></tr>
+          <tr class="total"><td><span class="hi">कुल</span><span class="en">Total</span></td><td class="num">₹44,000 – 1,11,000</td></tr>
+        </tbody>
+      </table>
+      <p class="small hi">पश्चिमी उ.प्र. के मध्यम परिवार के लिए 2026 का अनुमान। यात्रा, भोज, टेंट शामिल नहीं। हर कार्यक्रम से पहले पंडित जी से राशि तय करें; दक्षिणा ₹501, ₹1,100, ₹2,100 जैसी राशि में दी जाती है।</p>
+      <p class="small en">2026 estimate for a middle-class West UP family; excludes travel, bhoj and tent. Agree amounts with Pandit ji before each rite; dakshina is given in amounts like ₹501, ₹1,100, ₹2,100.</p>
+
+      <h2><span class="hi">पंडित जी से आज पूछें</span><span class="en">Ask Pandit ji today</span></h2>
+      <ul class="tight hi">
+        <li>गिनती देहावसान से या दाग से?</li>
+        <li>उठावनी का दिन और समय; पगड़ी उठावनी पर या तेरहवीं पर?</li>
+        <li>विसर्जन हरिद्वार या ब्रजघाट, और किस दिन?</li>
+        <li>दादाजी के पिता, दादा, परदादा के नाम (सपिंडी के लिए)।</li>
+        <li>ब्राह्मणों की संख्या और शय्या दान की पक्की सूची।</li>
+      </ul>
+      <ul class="tight en">
+        <li>Count from dehant or from Daag?</li>
+        <li>Uthavani day and time; Pagdi at Uthavani or Terahvi?</li>
+        <li>Visarjan at Haridwar or Brajghat, and which day?</li>
+        <li>Names of Dadaji's father, grandfather, great-grandfather (for Sapindi).</li>
+        <li>Number of Brahmins and the final shayya daan list.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <span class="hi">गरुड़ पुराण, धर्मशास्त्र, 2026 पंचांग और पश्चिमी उ.प्र. की आम परंपरा पर आधारित। रिवाज परिवार के अनुसार बदलते हैं; अंतिम निर्णय पंडित जी और घर के बड़ों का।</span>
+    <span class="en">Based on Garud Puran, dharmashastra, the 2026 panchang and common West UP practice. Customs vary by family; Pandit ji and elders have the final word.</span>
+    &nbsp;ॐ शान्तिः
+  </footer>
+</div>
+
+<script>
+const T={
+  months:{en:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],hi:["जन","फ़र","मार्च","अप्रै","मई","जून","जुला","अग","सित","अक्टू","नव","दिस"]},
+  days:{en:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],hi:["रवि","सोम","मंगल","बुध","गुरु","शुक्र","शनि"]},
+  p:{en:"Pandit ji",hi:"पंडित जी"},k:{en:"Karta",hi:"कर्ता"},f:{en:"Family",hi:"परिवार"},d:{en:"Daan / dakshina",hi:"दान / दक्षिणा"},
+  defK:{en:"Karta",hi:"कर्ता"},ph:{en:"Karta's name (who gave Daag)",hi:"कर्ता का नाम (जिसने दाग दिया)"},
+  quiet:{en:"Daily niyam and Garud Puran path.",hi:"रोज़ के नियम और गरुड़ पुराण पाठ।"},
+  days_:{en:"Days",hi:"दिन"},
+  today:{en:"Today: ",hi:"आज: "},next:{en:"Next: ",hi:"अगला: "},
+  cnt:{en:["Counted from dehant (6 Oct = Day 1)","Counted from Daag (7 Oct = Day 1)"],hi:["गिनती देहावसान से (6 अक्टूबर = दिन 1)","गिनती दाग से (7 अक्टूबर = दिन 1)"]}
+};
+const FEST={"2026-10-10":{en:"Sarva Pitru Amavasya",hi:"सर्व पितृ अमावस्या"},"2026-10-11":{en:"Navratri begins — no Ghatasthapana",hi:"नवरात्रि प्रारंभ — घटस्थापना नहीं"},"2026-10-18":{en:"Durga Ashtami",hi:"दुर्गा अष्टमी"},"2026-10-19":{en:"Maha Navami",hi:"महानवमी"}};
+
+const E=[
+ {id:"death",day:1,t:{en:"Dehant",hi:"देहावसान"},tm:{en:"8:10 pm · done",hi:"रात 8:10 · संपन्न"},fl:{en:"Indira Ekadashi, not in Panchak",hi:"इंदिरा एकादशी, पंचक नहीं"},
+  p:{en:"Death tithi = annual shraddh tithi (Ashwin Krishna Ekadashi).",hi:"मृत्यु तिथि = वार्षिक श्राद्ध तिथि (आश्विन कृष्ण एकादशी)।"},
+  k:{en:"Ganga jal, tulsi; body on the floor, head south.",hi:"गंगाजल, तुलसी; शरीर ज़मीन पर, सिर दक्षिण।"},
+  f:{en:"Sutak begins; mandir covered; akhand diya.",hi:"सूतक शुरू; मंदिर ढका; अखंड दीया।"},
+  d:{a:"—",en:"Preparations only.",hi:"केवल तैयारी।"}},
+ {id:"daag",day:2,t:{en:"Daag",hi:"दाग (अंतिम संस्कार)"},tm:{en:"done",hi:"संपन्न"},fl:null,
+  p:{en:"Shamshan pandit did the antyeshti vidhi.",hi:"श्मशान पंडित ने अंत्येष्टि विधि कराई।"},
+  k:{en:"K gave mukhagni and kapal kriya; daily niyam begins.",hi:"K ने मुखाग्नि और कपाल क्रिया की; नियम शुरू।"},
+  f:{en:"Bath on return; ghada and diya at the peepal.",hi:"लौटकर स्नान; पीपल पर घड़ा और दीया।"},
+  d:{a:"₹1,600 – 3,200",en:"Shamshan pandit and sevadars.",hi:"श्मशान पंडित और सेवादार।"}},
+ {id:"asthi",day:3,t:{en:"Asthi Sanchay (phool chunna)",hi:"अस्थि संचय (फूल चुनना)"},tm:{en:"Morning, before noon",hi:"सुबह, दोपहर से पहले"},fl:{en:"Day 4 also fine",hi:"चौथा दिन भी ठीक"},
+  p:{en:"Short puja at the pyre; milk and Ganga jal sprinkled.",hi:"चिता स्थल पर छोटी पूजा; दूध और गंगाजल छिड़काव।"},
+  k:{en:"K and male relatives collect asthi in cloth pouch or clay kalash.",hi:"K और पुरुष रिश्तेदार अस्थियाँ कपड़े की पोटली या मिट्टी के कलश में चुनते हैं।"},
+  f:{en:"Women usually stay home. Asthi stay outside the house.",hi:"महिलाएँ आमतौर पर घर पर। अस्थियाँ घर के बाहर रखें।"},
+  d:{a:"₹350 – 750",en:"Pandit ₹251–501; staff ₹101–251. Bring milk, Ganga jal, cloth, kalash.",hi:"पंडित ₹251–501; कर्मचारी ₹101–251। दूध, गंगाजल, कपड़ा, कलश ले जाएँ।"}},
+ {id:"uthavani",day:4,t:{en:"Uthavani",hi:"उठावनी"},tm:{en:"Typically 3–5 pm, home or dharamshala",hi:"आमतौर पर दोपहर 3–5, घर या धर्मशाला"},fl:{en:"Some do Day 3 evening",hi:"कुछ परिवार तीसरे दिन शाम"},
+  p:{en:"Shanti path, Gita or Garud Puran katha; announces Terahvi date.",hi:"शांति पाठ, गीता या गरुड़ पुराण कथा; तेरहवीं की घोषणा।"},
+  k:{en:"Sits by Dadaji's photo. Pagdi here only if that is your custom.",hi:"दादाजी की तस्वीर के पास बैठते हैं। रिवाज हो तो पगड़ी यहीं।"},
+  f:{en:"White durrie seating; condolence register; fix Terahvi date, venue beforehand.",hi:"सफ़ेद दरी; शोक रजिस्टर; तेरहवीं की तारीख और स्थान पहले तय करें।"},
+  d:{a:"₹1,100 – 2,100",en:"Pandit ji + vastra, fruit, sidha. No sweets.",hi:"पंडित जी + वस्त्र, फल, सीधा। मिठाई नहीं।"}},
+ {id:"visarjan",day:5,t:{en:"Asthi Visarjan — Haridwar / Brajghat",hi:"अस्थि विसर्जन — हरिद्वार / ब्रजघाट"},tm:{en:"Leave early morning",hi:"सुबह जल्दी निकलें"},fl:{en:"Any day before Day 10",hi:"दसवें दिन से पहले कभी भी"},
+  p:{en:"Teerth purohit: sankalp (gotra Mangal), pind daan, tarpan; vanshavali entry at Haridwar.",hi:"तीर्थ पुरोहित: संकल्प (मंगल गोत्र), पिंडदान, तर्पण; हरिद्वार में वंशावली में नाम।"},
+  k:{en:"Carries asthi (never into a home), immerses, til-jal tarpan.",hi:"अस्थियाँ लेकर जाते हैं (किसी घर में नहीं), विसर्जन, तिल-जल तर्पण।"},
+  f:{en:"2–5 men go. Bring Ganga jal cans, white clothes.",hi:"2–5 पुरुष जाते हैं। गंगाजल की कैन, सफ़ेद कपड़े साथ।"},
+  d:{a:"₹2,600 – 6,200",en:"Purohit ₹2,100–5,100 (Brajghat less); anna-vastra daan; gau seva ₹501+. Fix fee first.",hi:"पुरोहित ₹2,100–5,100 (ब्रजघाट कम); अन्न-वस्त्र दान; गौ सेवा ₹501+। दक्षिणा पहले तय करें।"}},
+ {id:"dash",day:10,t:{en:"Dashgatra",hi:"दशगात्र (दसवाँ)"},tm:{en:"Morning, river, ghat or peepal",hi:"सुबह, नदी, घाट या पीपल"},fl:null,
+  p:{en:"Dash pind daan; new janeu if worn.",hi:"दश पिंडदान; जनेऊ पहनते हों तो नया जनेऊ।"},
+  k:{en:"Mundan (head, beard, moustache); ghada taken down.",hi:"मुंडन (सिर, दाढ़ी, मूँछ); घड़ा उतारा जाता है।"},
+  f:{en:"Other men mundan per custom; whole house washed and cleaned.",hi:"रिवाज अनुसार दूसरे पुरुषों का मुंडन; पूरे घर की धुलाई-सफ़ाई।"},
+  d:{a:"₹1,600 – 4,100",en:"Pandit ₹1,100–2,100; naai ₹251–501 per head + clothes.",hi:"पंडित ₹1,100–2,100; नाई ₹251–501 प्रति व्यक्ति + कपड़े।"}},
+ {id:"ekadash",day:11,t:{en:"Ekadashah",hi:"एकादशाह (ग्यारहवाँ)"},tm:{en:"Morning",hi:"सुबह"},fl:null,
+  p:{en:"Ekoddisht shraddh; shayya daan; gau daan; panchgavya shuddhi.",hi:"एकोद्दिष्ट श्राद्ध; शय्या दान; गौदान; पंचगव्य शुद्धि।"},
+  k:{en:"Gives the shayya daan with sankalp in Dadaji's name.",hi:"दादाजी के नाम से संकल्प लेकर शय्या दान।"},
+  f:{en:"Arrange shayya: bed, bedding, clothes, shoes, umbrella, utensils, diya, sidha.",hi:"शय्या जुटाएँ: पलंग, बिस्तर, कपड़े, जूते, छाता, बर्तन, दीया, सीधा।"},
+  d:{a:{en:"₹3,200 – 10,200 + shayya",hi:"₹3,200 – 10,200 + शय्या"},en:"Mahabrahman ₹2,100–5,100; gau daan ₹1,100–5,100; shayya items ₹15,000–40,000.",hi:"महाब्राह्मण ₹2,100–5,100; गौदान ₹1,100–5,100; शय्या सामान ₹15,000–40,000।"}},
+ {id:"sapindi",day:12,t:{en:"Sapindikaran",hi:"सपिंडीकरण (बारहवाँ)"},tm:{en:"Morning, 2–3 hours",hi:"सुबह, 2–3 घंटे"},fl:{en:"Most important rite",hi:"सबसे महत्त्वपूर्ण"},
+  p:{en:"Joins Dadaji's pind with 3 ancestors; 16 masik shraddh; shuddhi havan.",hi:"दादाजी का पिंड 3 पूर्वजों से मिलाना; 16 मासिक श्राद्ध; शुद्धि हवन।"},
+  k:{en:"Gives names of Dadaji's father, grandfather, great-grandfather.",hi:"दादाजी के पिता, दादा, परदादा के नाम बताते हैं।"},
+  f:{en:"Get those names from elders in advance.",hi:"ये नाम पहले से बड़ों से पूछ लें।"},
+  d:{a:"₹3,100 – 7,100",en:"Main pandit ₹2,100–5,100; 3 more Brahmins ₹501–1,100 each + dhoti, sidha.",hi:"मुख्य पंडित ₹2,100–5,100; 3 और ब्राह्मण ₹501–1,100 हर एक + धोती, सीधा।"}},
+ {id:"terahvi",day:13,t:{en:"Terahvi — havan, Brahmin bhoj, Rasam Pagdi",hi:"तेरहवीं — हवन, ब्राह्मण भोज, रसम पगड़ी"},tm:{en:"Havan morning, bhoj midday",hi:"सुबह हवन, दोपहर भोज"},fl:{en:"Sutak ends",hi:"सूतक समाप्त"},
+  p:{en:"Shanti havan; Brahmin bhoj; portions for cow, crow, dog.",hi:"शांति हवन; ब्राह्मण भोज; गाय, कौआ, कुत्ते का हिस्सा।"},
+  k:{en:"Pagdi tied by K's sasural; serves Brahmins first.",hi:"K की ससुराल पगड़ी बाँधती है; पहले ब्राह्मणों को भोजन कराते हैं।"},
+  f:{en:"Sattvik bhoj for biraadari; Ganga jal through the house; mandir reopened.",hi:"बिरादरी के लिए सात्विक भोज; घर में गंगाजल; मंदिर खुलता है।"},
+  d:{a:"₹12,000 – 30,000",en:"Havan pandit ₹2,100–5,100; each of 13 Brahmins ₹501–1,100 + vastra + utensil; gaushala; helpers.",hi:"हवन पंडित ₹2,100–5,100; 13 ब्राह्मण हर एक ₹501–1,100 + वस्त्र + बर्तन; गौशाला; सेवक।"}}
+];
+
+let mode=0,L="hi";
+const $=id=>document.getElementById(id);
+function dayOf(e){return mode===1&&(e.id==="death"||e.id==="daag")?e.day-1:e.day}
+function dateFor(n){return new Date(2026,9,6+(n-1)+mode)}
+function iso(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function fmt(d){return T.days[L][d.getDay()]+" "+d.getDate()+" "+T.months[L][d.getMonth()]}
+function st(d){const t=iso(new Date()),x=iso(d);return x<t?"past":x===t?"today":"next"}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+function render(){
+  const typed=$("karta").value.trim(),k="<b>"+esc(typed||T.defK[L])+"</b>";
+  $("karta").placeholder=T.ph[L];
+  $("countNote").textContent=T.cnt[L][mode];
+  const at=n=>E.find(e=>dayOf(e)===n);
+  const out=[];let cur=null,nxt=null,gap=[];
+  const flush=()=>{if(!gap.length)return;
+    const a=gap[0],b=gap[gap.length-1];
+    const fests=gap.map(n=>FEST[iso(dateFor(n))]).filter(Boolean).map(f=>' <span class="flag warn">'+f[L]+'</span>').join("");
+    out.push('<div class="quiet">'+T.days_[L]+" "+(a===b?a:a+"–"+b)+" ("+fmt(dateFor(a))+(a===b?"":" – "+fmt(dateFor(b)))+"): "+T.quiet[L]+fests+'</div>');gap=[]};
+  for(let n=(mode?0:1);n<=13;n++){
+    const e=at(n);if(!e){gap.push(n);continue}
+    flush();
+    const d=dateFor(n),s=st(d),fe=FEST[iso(d)];
+    if(s==="today")cur={e,d};if(s==="next"&&!nxt)nxt={e,d};
+    const sub=x=>esc(x).replace(/\bK\b/g,k);
+    out.push('<div class="day '+s+'"><div class="when"><div class="dn">'+(n||"·")+'</div><div class="dt">'+fmt(d)+'</div></div><div class="body">'+
+      '<div class="head"><span class="t">'+e.t[L]+'</span><span class="tm">'+e.tm[L]+'</span>'+(e.fl?'<span class="flag">'+e.fl[L]+'</span>':'')+(fe?'<span class="flag warn">'+fe[L]+'</span>':'')+'</div>'+
+      '<div class="cols">'+
+      '<div class="c-p"><b class="r">'+T.p[L]+'</b>'+sub(e.p[L])+'</div>'+
+      '<div class="c-k"><b class="r">'+T.k[L]+(typed?" ("+esc(typed)+")":"")+'</b>'+sub(e.k[L])+'</div>'+
+      '<div class="c-f"><b class="r">'+T.f[L]+'</b>'+sub(e.f[L])+'</div>'+
+      '<div class="c-d"><b class="r">'+T.d[L]+'</b><span class="amt">'+(e.d.a[L]||e.d.a)+'</span><br>'+sub(e.d[L])+'</div>'+
+      '</div></div></div>');
+  }
+  flush();
+  $("days").innerHTML=out.join("");
+  const t=cur||nxt;
+  $("now").style.display=t?"":"none";
+  if(t)$("now").innerHTML="<b>"+(cur?T.today[L]:T.next[L])+t.e.t[L]+"</b> — "+fmt(t.d)+", "+t.e.tm[L];
+}
+function setMode(m){mode=m;$("cDeath").setAttribute("aria-pressed",m===0);$("cDaag").setAttribute("aria-pressed",m===1);render()}
+function setLang(l){L=l;document.body.className="l-"+l;document.documentElement.lang=l;$("lHi").setAttribute("aria-pressed",l==="hi");$("lEn").setAttribute("aria-pressed",l==="en");document.title=l==="hi"?"तेरह दिन की क्रिया — दादाजी, अक्टूबर 2026":"13-day kriya karma — Dadaji, Oct 2026";render()}
+$("cDeath").onclick=()=>setMode(0);$("cDaag").onclick=()=>setMode(1);
+$("lHi").onclick=()=>setLang("hi");$("lEn").onclick=()=>setLang("en");
+$("karta").addEventListener("input",render);
+render();
+</script>
+</body>
+</html>
